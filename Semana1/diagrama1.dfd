@@ -1,0 +1,29 @@
+ Dfd (c)
+1
+1
+1
+0
+0
+4
+1
+26
+'Digite los km a recorrer'
+5
+1
+11
+Km_recorrer
+6
+2
+4
+V_km
+4
+1050
+9
+resultado
+18
+Km_recorrer * V_km
+4
+1
+36
+'El valor del boleto es ', resultado
+1
