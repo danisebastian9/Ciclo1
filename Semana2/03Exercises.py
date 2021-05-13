@@ -1,3 +1,4 @@
+# Ejercicios clase 13/05 
 phrase = "La Vida Es Bella"
 
 # Contar cuantos caracteres tiene la cadena "La Vida Es Bella"
@@ -13,7 +14,7 @@ chain1 = "Hola Hola"
 multiplyChain = chain1 * 20
 print(multiplyChain)
 
-# Buscar la palabra "es" en la cadena " La Vida Es Bella"
+# Buscar la palabra "es" en la cadena "La Vida Es Bella"
 find1 = phrase.find("es")
 print(find1)
 
