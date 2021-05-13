@@ -1,3 +1,4 @@
+# This exercise request a specific amount of units to order for a clothes shop and the total price is calculated. 
 
 quantity123 = int(input("Add the amount of Men pants to order "))
 total123 = quantity123 * 45000
