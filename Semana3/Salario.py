@@ -12,4 +12,4 @@ if horasTrabajadas > 0 and horasTrabajadas <= 80:
         salario = horasTrabajadas * 1600
     print("Su salario semanal es: ", valorNormal)
 else:
-    print("Dato invalido, ingrese un numero mayor que 0 o menor que 80 ")
+    print("Dato invalido, ingrese un numero mayor que 0 o menor que 81 ")
