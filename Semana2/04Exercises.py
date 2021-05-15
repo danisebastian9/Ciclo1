@@ -27,4 +27,4 @@ totalCerveza = cerveza * 2
 
 totalOrden = totalBcJamon + totalBcQueso + totalPttFritas + totalRefrescos + totalCerveza
 
-print("El total de su orden son ", totalOrden, "EUR")
+print("El total de su orden son €", totalOrden, "EUR")
