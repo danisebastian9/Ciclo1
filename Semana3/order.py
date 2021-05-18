@@ -31,4 +31,4 @@ elif num3 <= num2 <= num1:
 else: 
     print("Numeros no son validos ")
 
-print("El orden ascendente es:", menor, medio, mayor)
+print("El orden ascendente es:", menor,'-', medio,'-', mayor)
