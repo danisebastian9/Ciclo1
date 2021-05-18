@@ -31,3 +31,4 @@ else:
     print("Respuesta no valida, responda solo A, B, C, D")
 
 print('El resultado de la operacion', operSelect, 'entre ', numero1, 'y ', numero2, ' es', resultado)
+
