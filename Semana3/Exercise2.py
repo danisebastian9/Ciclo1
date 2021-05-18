@@ -13,6 +13,21 @@ A - SUMA
 B - RESTA
 C - MULTIPLICACION
 D - DIVISION
-'''))
+ '''))
 
+if operacion.upper() == "A":
+    resultado = numero1 + numero2
+    operSelect = "SUMA"
+elif operacion.upper() == "B":
+    resultado = numero1 - numero2
+    operSelect = "RESTA"
+elif operacion.upper() == "C":
+    resultado = numero1 * numero2
+    operSelect = "MULTIPLICACION"
+elif operacion.upper() == "D": 
+    resultado = numero1 / numero2
+    operSelect = "DIVISION"
+else:
+    print("Respuesta no valida, responda solo A, B, C, D")
 
+print('El resultado de la operacion', operSelect, 'entre ', numero1, 'y ', numero2, ' es', resultado)
