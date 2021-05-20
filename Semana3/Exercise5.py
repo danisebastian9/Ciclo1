@@ -37,4 +37,4 @@ else:
     salarioFinal = 0
 
 
-print('Su aumento anual es', porcAumento, aumento, ' y su nuevo salario va a ser:', salarioFinal)
+print('Su aumento anual es', porcAumento, 'por un monto de:' ,aumento, ' y su nuevo salario va a ser:', salarioFinal)
