@@ -86,7 +86,7 @@ elif nivel != 'B' or nivel != 'A' or promedio < 0 and promedio > 10.00:
     totalConDesc = totalMatricula
 
 
-print('Las unidades a cursar son', unidadesCursar, '. El total de Matricula sin descuento es:', totalMatricula, '. Su descuento es de', descuento, '. Y el precio final con descuento es:', totalConDesc)
+print('Las unidades a cursar son', unidadesCursar, '. El total de Matricula sin descuento es: $', totalMatricula, '. Su descuento es de: $', descuento, '. Y el precio final con descuento es: $', totalConDesc)
     
 
 
