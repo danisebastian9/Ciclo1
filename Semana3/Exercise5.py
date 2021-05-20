@@ -32,10 +32,9 @@ elif tiempoServicio > 20:
     salarioFinal = salario + aumento
 
 else: 
-    porcAumento = 'Años laborando en la empresa no valido '
-    aumento = 0
+    porcAumento = 'invalido'
+    aumento = 'NA'
     salarioFinal = 0
-
 
 
 print('Su aumento anual es', porcAumento, aumento, ' y su nuevo salario va a ser:', salarioFinal)
