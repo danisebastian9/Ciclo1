@@ -28,19 +28,32 @@ El dueño de la Universidad le ha solicitado a usted como programador, que le de
 beneficiario = str(input("Ingrese su nombre y apellido: "))
 edad = int(input('Ingrese su edad: '))
 ingreso = float(input('Ingrese la cantidad de salarios minimos mensuales de su ingreso familiar: '))
-
+puntaje = int(input('Ingrese su puntaje del examen de aptitud entre 0 y 100: '))
 
 if edad >= 15 and edad <= 18: 
-    descuento = 25
+    descuentoEdad = 25
 elif edad >= 19 and edad <= 21:
-    descuento = 15
+    descuentoEdad = 15
 elif edad >= 22 and edad <= 25:
-    descuento = 10
+    descuentoEdad = 10
 else: 
-    descuento = 0
+    descuentoEdad = 0
+
+if ingreso <= 1: 
+    descuentoIngreso = 30
+elif ingreso > 1 and ingreso <= 2:
+    descuentoIngreso = 20
+elif ingreso > 2 and ingreso <= 3:
+    descuentoIngreso = 10
+elif ingreso > 3 and ingreso <= 4:
+    descuentoIngreso = 5
+else:
+    descuentoIngreso = 0
 
 
-
+if puntaje >= 96:
+    descuentoPuntaje = 45
+elif puntaje >= 80 and puntaje < 96
 
 
 
