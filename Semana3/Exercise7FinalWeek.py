@@ -25,10 +25,19 @@ El dueño de la Universidad le ha solicitado a usted como programador, que le de
     • Mostrar en consola el nombre y apellido del beneficiario, el descuento recibido por edad, el recibido por el ingreso familiar, el recibido por el puntaje del examen y el descuento total que recibirá sobre el valor de la matrícula.   
 '''
 
-usuario = str(input("Ingrese su nombre y apellido: "))
+beneficiario = str(input("Ingrese su nombre y apellido: "))
 edad = int(input('Ingrese su edad: '))
 ingreso = float(input('Ingrese la cantidad de salarios minimos mensuales de su ingreso familiar: '))
 
+
+if edad >= 15 and edad <= 18: 
+    descuento = 25
+elif edad >= 19 and edad <= 21:
+    descuento = 15
+elif edad >= 22 and edad <= 25:
+    descuento = 10
+else: 
+    descuento = 0
 
 
 
