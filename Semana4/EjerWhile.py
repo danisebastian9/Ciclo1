@@ -1,3 +1,5 @@
 # Hacer la tabla de multiplicar desde N hasta M 
 
-while
+n = int(input('Digite limite inferior: '))
+m = int(input('Digite limite superior: '))
+
