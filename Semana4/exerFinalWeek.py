@@ -26,3 +26,5 @@ programa en lenguaje Python que le permita:
     errores respecto del total de días reportados.
 '''
 
+minTemperature = float(input('Add minimum temperature: '))
+maxTemperature = float(input('Add Maximum temperature: '))
