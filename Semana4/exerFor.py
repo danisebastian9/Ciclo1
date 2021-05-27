@@ -4,7 +4,7 @@
 x = int(input('Ingrese rango inferior: '))
 y = int(input('Ingrese rango superior: '))
 
-for i in range(x, y):
+for i in range(x, y + 1):
     if i % 2 == 0: 
-        print(i)
+        print(i, end=' - ')
          
