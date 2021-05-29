@@ -30,6 +30,7 @@ minTemperatura = float(input('Add minimum temperature: '))
 maxTemperatura = float(input('Add Maximum temperature: '))
 
 totalMinTemp = 0
+totalMaxTemp = 0
 errorMin = 0
 errorMax = 0
 
@@ -40,4 +41,7 @@ while minTemperatura != 0 and maxTemperatura != 0:
         errorMax += 1
     elif minTemperatura >= 5 and minTemperatura <= 35: 
         totalMinTemp = totalMinTemp + minTemperatura
-        
+    elif maxTemperatura >= 5 and maxTemperatura <= 35:
+        totalMaxTemp = totalMaxTemp + minTemperatura
+
+    
