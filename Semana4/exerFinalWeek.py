@@ -29,6 +29,7 @@ programa en lenguaje Python que le permita:
 minTemperatura = float(input('Add minimum temperature: '))
 maxTemperatura = float(input('Add Maximum temperature: '))
 
+totalMinTemp = 0
 errorMin = 0
 errorMax = 0
 
@@ -37,4 +38,6 @@ while minTemperatura != 0 and maxTemperatura != 0:
         errorMin += 1
     elif maxTemperatura > 35:
         errorMax += 1
-    
+    elif minTemperatura >= 5 and minTemperatura <= 35: 
+        totalMinTemp = totalMinTemp + minTemperatura
+        
