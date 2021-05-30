@@ -35,9 +35,7 @@ Contador_Min = 0
 Contador_Max = 0
 Contador_Ambos = 0
 Total_Max = 0
-Total_Min = 0
-Media_Min = 0
-Porcentaje_Dias_Error = 0   
+Total_Min = 0   
 
 while Temperatura_Min != 0 or Temperatura_Max != 0:
     Contador_Dias += 1
@@ -63,6 +61,7 @@ while Temperatura_Min != 0 or Temperatura_Max != 0:
     print(Media_Max)
     Media_Min = Total_Min / Contador_Dias
     print(Media_Min)
+    Porcentaje_Dias_Error = 0
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 
