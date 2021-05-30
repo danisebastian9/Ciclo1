@@ -50,13 +50,15 @@ while Temperatura_Min != 0 or Temperatura_Max != 0:
     elif Temperatura_Min >= 5 or Temperatura_Max <= 35:
         Total_Max += Temperatura_Max
         Total_Min += Temperatura_Min
-
-    Media_Max = Total_Max / (Contador_Dias - Dias_Error)
-    Media_Min = Total_Min / (Contador_Dias - Dias_Error)  
+ 
     Porcentaje_Dias_Error = (Dias_Error / Contador_Dias ) * 100
     
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
+
+Media_Max = Total_Max / (Contador_Dias - Dias_Error)
+Media_Min = Total_Min / (Contador_Dias - Dias_Error) 
+
 print('Total dias campo', Contador_Dias)
 print('Total Dias con error', Dias_Error)
 print('Dias Error Min', Contador_Min)
