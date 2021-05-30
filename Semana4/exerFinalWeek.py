@@ -39,31 +39,29 @@ Total_Min = 0
 
 while Temperatura_Min != 0 or Temperatura_Max != 0:
     Contador_Dias += 1
-    print('Dias',Contador_Dias)
     if Temperatura_Min < 5 or Temperatura_Max > 35: 
         Dias_Error += 1 
-        print('Error cualquier dia',Dias_Error)
-        if Temperatura_Min < 5:
-            Contador_Min += 1
-            print('error minimo', Contador_Min)
-        if Temperatura_Max > 35:
-            Contador_Max += 1
-            print('error maximo', Contador_Max)
         if Temperatura_Min < 5 and  Temperatura_Max > 35: 
             Contador_Ambos += 1
-            print('error ambos', Contador_Ambos)
+        elif Temperatura_Min < 5:
+            Contador_Min += 1
+        elif Temperatura_Max > 35:
+            Contador_Max += 1
     elif Temperatura_Min >= 5 or Temperatura_Max <= 35:
         Total_Max += Temperatura_Max
-        print(Total_Max)
         Total_Min += Temperatura_Min
-        print(Total_Min)
-    Media_Max = Total_Max / Contador_Dias
-    print(Media_Max)
-    Media_Min = Total_Min / Contador_Dias
-    print(Media_Min)
-    Porcentaje_Dias_Error = 0
+
+    Media_Max = Total_Max / (Contador_Dias - Dias_Error)
+    Media_Min = Total_Min / (Contador_Dias - Dias_Error)  
+    Porcentaje_Dias_Error = (Dias_Error / Contador_Dias ) * 100
+    
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
-
-
-    
+print('Total dias campo', Contador_Dias)
+print('Total Dias con error', Dias_Error)
+print('Dias Error Min', Contador_Min)
+print('Dias Error Max', Contador_Max)
+print('Dias Error Ambos', Contador_Ambos)
+print('Temp Media Max', Media_Max)
+print('Temp Media Min', Media_Min)
+print('Porcentaje Dias Error', Porcentaje_Dias_Error)
