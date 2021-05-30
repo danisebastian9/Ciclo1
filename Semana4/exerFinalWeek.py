@@ -32,7 +32,8 @@ Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 Contador_Dias = 0
 Dias_Error = 0
 Contador_Min = 0
-Contador_Max = 0  
+Contador_Max = 0
+Contador_Ambos = 0   
 
 while Temperatura_Min != 0 or Temperatura_Max != 0:
     Contador_Dias += 1
@@ -43,9 +44,12 @@ while Temperatura_Min != 0 or Temperatura_Max != 0:
         if Temperatura_Min < 5:
             Contador_Min += 1
             print('error minimo', Contador_Min)
-        elif Temperatura_Max > 35:
+        if Temperatura_Max > 35:
             Contador_Max += 1
             print('error maximo', Contador_Max)
+        if Temperatura_Min < 5 and  Temperatura_Max > 35: 
+            Contador_Ambos += 1
+            print('error ambos', Contador_Ambos)
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 
