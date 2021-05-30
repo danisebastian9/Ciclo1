@@ -29,14 +29,23 @@ programa en lenguaje Python que le permita:
 Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
 Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 
-Contador_Dias = 1
+Contador_Dias = 0
 Dias_Error = 0
+Contador_Min = 0
+Contador_Max = 0  
 
 while Temperatura_Min != 0 or Temperatura_Max != 0:
     Contador_Dias += 1
+    print('Dias',Contador_Dias)
     if Temperatura_Min < 5 or Temperatura_Max > 35: 
         Dias_Error += 1 
-        print(Dias_Error)
+        print('Error cualquier dia',Dias_Error)
+        if Temperatura_Min < 5:
+            Contador_Min += 1
+            print('error minimo', Contador_Min)
+        elif Temperatura_Max > 35:
+            Contador_Max += 1
+            print('error maximo', Contador_Max)
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 
