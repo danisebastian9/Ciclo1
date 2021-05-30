@@ -33,7 +33,11 @@ Contador_Dias = 0
 Dias_Error = 0
 Contador_Min = 0
 Contador_Max = 0
-Contador_Ambos = 0   
+Contador_Ambos = 0
+Total_Max = 0
+Total_Min = 0
+Media_Min = 0
+Porcentaje_Dias_Error = 0   
 
 while Temperatura_Min != 0 or Temperatura_Max != 0:
     Contador_Dias += 1
@@ -50,6 +54,15 @@ while Temperatura_Min != 0 or Temperatura_Max != 0:
         if Temperatura_Min < 5 and  Temperatura_Max > 35: 
             Contador_Ambos += 1
             print('error ambos', Contador_Ambos)
+    elif Temperatura_Min >= 5 or Temperatura_Max <= 35:
+        Total_Max += Temperatura_Max
+        print(Total_Max)
+        Total_Min += Temperatura_Min
+        print(Total_Min)
+    Media_Max = Total_Max / Contador_Dias
+    print(Media_Max)
+    Media_Min = Total_Min / Contador_Dias
+    print(Media_Min)
     Temperatura_Max = int(input('Ingrese temperatura maxima hoy: '))
     Temperatura_Min = int(input('Ingrese temperatura minima hoy: '))
 
