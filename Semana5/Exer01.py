@@ -34,8 +34,16 @@ while nota != 0:
     nota = float(input('Ingrese la nota: '))
 
 total = contaMin + contaMax
-promedioMax = sumaMin / contaMin 
-promedioMin = sumaMax / contaMax
+promedioMin = sumaMin / contaMin 
+promedioMax = sumaMax / contaMax
 porcMin = contaMin * 100 / total
 porcMax = contaMax * 100 / total
 
+print('Nota minima: ', min)
+print('Nota maxima: ', max)
+print('Cantidad de reprobados: ', contaMin)
+print('Cantidad de aprobados: ', contaMax)
+print('Promedio de notas minimas: ', promedioMin)
+print('Promedio de notas maximas: ', promedioMax)
+print('Porcentaje de reprobados: ', porcMin)
+print('Porcentaje de aprobados: ', porcMax)
