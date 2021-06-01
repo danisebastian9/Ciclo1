@@ -9,3 +9,8 @@
 # Porcentaje de los que aprobaron 
 # Porcentaje de los que reprobaron. 
 
+nota = float(input('Ingrese la nota: '))
+
+while nota != 0:
+    if nota > 0 and nota <= 5:
+        
