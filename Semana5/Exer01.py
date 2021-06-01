@@ -26,4 +26,16 @@ while nota != 0:
         
         if nota < 3:
             contaMin += 1
-        
+            sumaMin += nota
+        else:
+            contaMax += 1
+            sumaMax += nota
+    
+    nota = float(input('Ingrese la nota: '))
+
+total = contaMin + contaMax
+promedioMax = sumaMin / contaMin 
+promedioMin = sumaMax / contaMax
+porcMin = contaMin * 100 / total
+porcMax = contaMax * 100 / total
+
