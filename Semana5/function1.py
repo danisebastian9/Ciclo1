@@ -74,7 +74,34 @@ print('______________________________________________')
 import random
 print(random.randint(10,20)) # numero aleatorio entre el rango dado
 print(random.random()) # numeros aleatorios entre 0 y 1
-print(random.randbytes(5)) 
+print(random.randbytes(5)) # los bytes
+
+print('______________________________________________')
+# funciones externas: Creadas.
+
+def saludo():
+    print('Hola Muchachos.......')
+
+def saludoNombre(nombre):
+    print(f'Hola.... {nombre}')
+
+saludo()
+saludo()
+nom = 'Juan'
+saludoNombre(nom)
+saludoNombre('Maria')
+saludoNombre(5)
+
+def nombreCompleto(nombre, apellido):
+    print(f'Hola, bienvenido {nombre} {apellido}')
+
+nombreCompleto('Sebastian','Cubides')
+
+nombre = input('Digite su nombre: ')
+apellido = input('Digite su apellido: ')
+nombreCompleto(nombre, apellido)
+
+
 
 
 
