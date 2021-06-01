@@ -10,7 +10,20 @@
 # Porcentaje de los que reprobaron. 
 
 nota = float(input('Ingrese la nota: '))
+max = nota
+min = nota
+contaMin = 0 
+contaMax = 0 
+sumaMax = 0 
+sumaMin = 0
 
 while nota != 0:
     if nota > 0 and nota <= 5:
+        if nota > max:
+            max = nota 
+        elif nota < min: 
+            min = nota
+        
+        if nota < 3:
+            contaMin += 1
         
