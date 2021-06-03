@@ -1,13 +1,16 @@
 # 1.Crear una funcion que sirva para la vida cotidiana
 # 2.Buscar 2 funciones internas y mostrarlas en clase
 
-quanLlantas = int.upper(input('Ingrese cantidad de llantas a ordenar: '))
+quanLlantas = int.input('Ingrese cantidad de llantas a ordenar: ')
 
 def funcLlantas(quanLlantas):
-    if  quanLlantas > 1 and quanLlantas < 5: 
-        totalVenta = quanLlantas * 300
+    if  quanLlantas > 1 and quanLlantas < 5:
+        precioUnidad = 300 
+        totalVenta = quanLlantas * precioUnidad
     elif quanLlantas >= 5 and quanLlantas <= 10:
-        totalVenta = quanLlantas * 250
+        precioUnidad = 250 
+        totalVenta = quanLlantas * precioUnidad
     else: 
+        precioUnidad = 200 
         totalVenta = quanLlantas * 200
-    print(totalVenta)
+    print(f'Por ordenar {quanLlantas} llantas,  {totalVenta}' )
