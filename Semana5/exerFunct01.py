@@ -1,7 +1,7 @@
 # 1.Crear una funcion que sirva para la vida cotidiana
 # 2.Buscar 2 funciones internas y mostrarlas en clase
 
-quanLlantas = int.input('Ingrese cantidad de llantas a ordenar: ')
+cantidadUnidad = int(input('Ingrese cantidad de llantas a ordenar: '))
 
 def funcLlantas(quanLlantas):
     if  quanLlantas > 1 and quanLlantas < 5:
@@ -14,3 +14,5 @@ def funcLlantas(quanLlantas):
         precioUnidad = 200 
         totalVenta = quanLlantas * precioUnidad
     print(f'Por ordenar {quanLlantas} llantas, su precio unitario es ${precioUnidad} y el total es ${totalVenta}' )
+
+funcLlantas(cantidadUnidad)
