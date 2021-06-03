@@ -21,6 +21,7 @@ def valorCita(tipo, tarifa):
         vFinal = 0
     return vFinal
 
+# Por buenas practicas pedir datos afuera de la funcion. 
 tipo = tipoCita()
 print(f'Su tipo de cita es {tipo}')
 tarifa = int(input('Digite la tarifa de su cita: '))
