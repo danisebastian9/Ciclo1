@@ -12,5 +12,5 @@ def funcLlantas(quanLlantas):
         totalVenta = quanLlantas * precioUnidad
     else: 
         precioUnidad = 200 
-        totalVenta = quanLlantas * 200
-    print(f'Por ordenar {quanLlantas} llantas,  {totalVenta}' )
+        totalVenta = quanLlantas * precioUnidad
+    print(f'Por ordenar {quanLlantas} llantas, su precio unitario es ${precioUnidad} y el total es ${totalVenta}' )
