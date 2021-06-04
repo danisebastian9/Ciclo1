@@ -57,10 +57,12 @@ menu = int(input('-- Consignar(1) -- Retirar(2) -- Consultar Saldo(3) -- Capacid
 while menu in [1,2,3,4]:
     if menu == 1:
         monto = int(input('Digite monto a consignar: '))
-        consultarSaldo(consignar(saldo,monto))
+        saldo = consignar(saldo, monto)
+        consultarSaldo(saldo)
     elif menu == 2:
         monto = int(input('Digite monto a retirar: '))
-        consultarSaldo(retirar(saldo, saldoMin, monto))
+        saldo = retirar(saldo, saldoMin, monto)
+        consultarSaldo(saldo)
     elif menu == 3: 
         consultarSaldo(saldo)
     elif menu == 4:
