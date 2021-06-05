@@ -62,3 +62,10 @@ Los parámetros de salida deben ser:
 
 '''
 
+horasTrabajadas = int(input('Ingrese horas trabajadas: '))
+valorHora = int(input('Ingrese valor de hora laboral: '))
+
+
+
+
+
