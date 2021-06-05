@@ -12,6 +12,7 @@ Definir una función que diga si una cadena es palindrome "Sometamos o matemos" 
 #     return reversa
 
 def reves(cadena):
+    cadena = cadena
     longitud = len(cadena)-1
     inversa = ''
     for i in range(longitud, -1, -1):
@@ -20,12 +21,12 @@ def reves(cadena):
 
 def esPalindrome(nuevaPal, palabra):
     if nuevaPal == palabra:
-        print('Palabra es palindrome')
+        print('Palabra o frase es palindrome')
     else: 
-        print('palabra no es palindrome')
+        print('palabra o frase no es palindrome')
 
-palabra = input('Ingrese la palabra a analizar: ')
-
+palabra = input('Ingrese la palabra a analizar: ').lower()
+palabra = palabra.replace(' ', '')
 nuevaPal = reves(palabra)
 print(nuevaPal)
 esPalindrome(nuevaPal, palabra)
