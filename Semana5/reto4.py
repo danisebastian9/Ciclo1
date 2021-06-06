@@ -63,7 +63,11 @@ Los parámetros de salida deben ser:
 '''
 
 def salarioNormal(horasTrabajadas, valorHora):
-   salarioNrml = horasTrabajadas * valorHora
+   if horasTrabajadas > 40:
+      horasTrabajadas = 40
+      salarioNrml = horasTrabajadas * valorHora
+   else:
+      salarioNrml = horasTrabajadas * valorHora
    return salarioNrml 
 
 def horasExtras(horasTrabajadas, valorHora):
