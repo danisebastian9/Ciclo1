@@ -50,7 +50,7 @@ Los parámetros de salida deben ser:
  - Valor horas normales: ht * vh
  - Valor horas extras: (ht – 40) * 1.5*vh
  - Sueldo bruto: valor horas normales + valor horas extras.
- - Descuento parafiscales: sb * 0.09
+ - Descuento parafiscales: sb * 0.09 
  - Descuento salud: sb * 0.04
  - Descuento pensión: sb * 0.04
  - Suma de todos los descuentos
@@ -62,8 +62,67 @@ Los parámetros de salida deben ser:
 
 '''
 
-horasTrabajadas = int(input('Ingrese horas trabajadas: '))
+def salarioNormal(horasTrabajadas, valorHora):
+   salarioNrml = horasTrabajadas * valorHora
+   return salarioNrml 
+
+def horasExtras(horasTrabajadas, valorHora):
+   if horasTrabajadas > 40: 
+      horasExtra = horasTrabajadas - 40
+      extraFinal = valorHora * 1.5 * horasExtra
+   else:
+      extraFinal = 0
+   return extraFinal
+
+def salarioBruto(hNormales, hExtras):
+   salarioBr = hNormales + hExtras
+   return salarioBr
+
+def descuentos(salarioBruto):
+   desParafiscales = salarioBruto * 0.09
+   desSalud = salarioBruto * 0.04
+   desPension = salarioBruto * 0.04
+   desTotal = desParafiscales + desSalud + desPension
+   sueldoNeto = salarioBruto - desTotal
+   return desParafiscales, desSalud, desPension, desTotal, sueldoNeto
+
+def provisiones(salarioBruto):
+   provPrima = salarioBruto * 8.33 / 100
+   provCesantias = salarioBruto * 8.33 / 100
+   provIntCes = salarioBruto * 1.0 / 100
+   provVacas = salarioBruto * 4.17 / 100
+   return provPrima, provCesantias, provIntCes, provVacas
+
+
+# Main Program: 
+
+horasTrabajadas = int(input('Ingrese horas trabajadas por semana: '))
 valorHora = int(input('Ingrese valor de hora laboral: '))
+
+sNormal = salarioNormal(horasTrabajadas,valorHora)
+hExtras = horasExtras(horasTrabajadas,valorHora)
+sBruto = salarioBruto(sNormal,hExtras)
+descPrfscls, descSalud, descPension, descTotal, sueldoNeto = descuentos(sBruto)
+prvPrima, prvCesantias, prvIntCes, prvVacas = provisiones(sBruto)
+
+print(f'El valor horas normales es: {sNormal}')
+print(f'El valor horas extras es: {hExtras}')
+print(f'El valor salario bruto es: {sBruto}')
+print(f'El descuento parafiscales es: {descPrfscls}')
+print(f'El descuento salud es: {descSalud}')
+print(f'El descuento pension es: {descPension}')
+print(f'El total de descuentos es: {descTotal}')
+print(f'El sueldo neto es: {sueldoNeto}')
+print(f'Provisiones para prima son: {prvPrima}')
+print(f'Provisiones para Cesantias son: {prvCesantias}')
+print(f'Provisiones para Intereses de Cesantias son: {prvIntCes}')
+print(f'Provisiones para Vacaciones son: {prvVacas}')
+
+
+
+
+
+
 
 
 
