@@ -3,9 +3,22 @@ Realicen en Python un programa que lea 10 números por teclado,
 los almacene en un arreglo y muestre la suma, 
 resta, multiplicación y división de todos.
 '''
+
 import numpy as np
 
-nums = int(input('Ingrese el numero a guardar -> '))
+def numList():
+    longLista = 10 
+    numList = np.zeros(longLista, dtype=int)
 
-numList = np.zeros(10,dtype=int)
+    for i in range(longLista):
+        numList[i] = int(input('Ingrese el numero a guardar -> '))
+    return numList
+
+lista = numList()
+suma = lista.sum()
+
+print(lista)
+print(suma)
+
+
 
