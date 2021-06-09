@@ -7,4 +7,5 @@ import numpy as np
 
 nums = int(input('Ingrese el numero a guardar -> '))
 
+numList = np.zeros(10,dtype=int)
 
