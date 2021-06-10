@@ -12,13 +12,16 @@ def numList():
 
     for i in range(longLista):
         numList[i] = int(input('Ingrese el numero a guardar -> '))
-    return numList
-
+    return numList    
 lista = numList()
+
 suma = lista.sum()
+multiplicacion = lista.prod()
+
 
 print(lista)
 print(suma)
+print(multiplicacion)
 
 
 
