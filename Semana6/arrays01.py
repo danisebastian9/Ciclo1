@@ -5,7 +5,7 @@ import numpy as np
 
 matriz = np.zeros((5,5), dtype=int)
 
-sumFilas = np.zero(5, dtype=int)
+sumFilas = np.zeros(5, dtype=int)
 sumColumn = np.zeros(5, dtype=int)
 
 for i in range(5):
@@ -15,11 +15,12 @@ print(matriz)
 
 for i in range(5):
     sumFilas[i] = matriz[i].sum()
-print(sumFilas)
+print(f'Suma de Filas : {sumFilas}')
 
 matriz_colum = matriz.transpose()
 for i in range(5):
     sumColumn[i] = matriz_colum[i].sum()
 
+print(f'Suma de columnas : {sumColumn}')
 
 
