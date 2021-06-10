@@ -8,3 +8,18 @@ matriz = np.zeros((5,5), dtype=int)
 sumFilas = np.zero(5, dtype=int)
 sumColumn = np.zeros(5, dtype=int)
 
+for i in range(5):
+    for j in range(5):
+        matriz[i][j] = input('Digite un numero -> ')
+print(matriz)
+
+for i in range(5):
+    sumFilas[i] = matriz[i].sum()
+print(sumFilas)
+
+matriz_colum = matriz.transpose()
+for i in range(5):
+    sumColumn[i] = matriz_colum[i].sum()
+
+
+
