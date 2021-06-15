@@ -4,6 +4,10 @@ import os
 # Crear - w. crea el archivo o lo abre en modo escritura, si tiene informacion la borra
 archivo1 = open('archivos/archivo1.txt', 'w')
 
+# Crear - x - Crea el archivo si no existe, si existe da error y no borra la informacion existente
+# archivo1 = open('archivos/archivo1.txt', 'x')
+
+
 frase = 'Hola Mundo!...'
 nombre = input('Digite su nombre -> \n')
 # nombre = input('Digite su nombre -> ') + frase
