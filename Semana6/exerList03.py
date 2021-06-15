@@ -27,15 +27,15 @@ print(numeros)
 #         cont += 1
 # print(numeros)
 
-data_list = numeros
-new_list = []
+# data_list = numeros
+# new_list = []
 
-while data_list:
-    minimum = data_list[0]  # arbitrary number in list 
-    for x in data_list: 
-        if x < minimum:
-            minimum = x
-    new_list.append(minimum)
-    data_list.remove(minimum)    
+# while data_list:
+#     minimum = data_list[0]  # arbitrary number in list 
+#     for x in data_list: 
+#         if x < minimum:
+#             minimum = x
+#     new_list.append(minimum)
+#     data_list.remove(minimum)    
 
-print(new_list)
+# print(new_list)
