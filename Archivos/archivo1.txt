@@ -10,3 +10,10 @@ Escribiendo linea 7
 Escribiendo linea 8
 Escribiendo linea 9
 Escribiendo linea 10
+4
+8
+9
+4
+2
+6
+8
