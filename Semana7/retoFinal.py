@@ -52,12 +52,30 @@ def deleteData(list):
         for i in list:
             file.write(i + '\n')
         file.close()
-
-
     
+def mainMenu():
+    mainMenu = int(input('''
+    Menu Principal
+    1. Ver listado
+    2. Ver listado filtrado
+    3. Agregar beneficiario
+    4. Buscar beneficiario
+    5. Borrar beneficiario
+    6. Salir
+    '''))
+    return mainMenu
+
+# MAIN PROGRAM 
 
 
-
-
-
+createFile()
+menu = mainMenu()
+print(menu)
 list = viewData()
+print(list)
+# while menu != 6:
+#     if menu == 1:
+#         print('Listado de beneficiarios \n')
+#         print(list)
+#         print(menu)
+    

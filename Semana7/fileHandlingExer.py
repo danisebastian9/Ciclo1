@@ -49,7 +49,7 @@ if name in lista:
 letra = input('Digite letra a filtrar -> ').upper()
 for i in lista():
     if i[0] == letra:
-        posicion = lista.index(name)
+        posicion = lista.index(i)
         print(lista[posicion])
         print(lista[posicion + 1])
     
