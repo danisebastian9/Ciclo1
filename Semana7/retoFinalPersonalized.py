@@ -1,11 +1,11 @@
 # Menu con while
 
 def createFile():
-    file = open('agenda.txt','w')
+    file = open('Archivos/agenda.txt','w')
     file.close()
 
 def viewData():
-    file = open('agenda.txt','r')
+    file = open('Archivos/agenda.txt','r')
     data = file.readlines()
     file.close()
     count = 0 
@@ -25,7 +25,7 @@ def filterData(list):
             print(list[position + 2])
 
 def addData(list):
-    file = open('agenda.txt','a')
+    file = open('Archivos/agenda.txt','a')
     user = input('Ingrese Nombre y Apellido del beneficiario -> ').title()
     userId = input('Ingrese Numero de cedula del beneficiario -> ')
     if userId in list:
@@ -38,7 +38,7 @@ def addData(list):
     file.close()
 
 def searchData(list):
-    user = input('Digite el nombre y apellido del beneficiario a buscar:').title()
+    user = input('Ingrese Nombre y Apellido a buscar -> ').title()
     if user in list:
         position = list.index(user)
         print(list[position])
@@ -46,13 +46,13 @@ def searchData(list):
         print(list[position + 2])
 
 def deleteData(list):
-    userID = input('Digite la cedula del beneficiario a borrar:')
+    userID = input('Ingrese Numero de Cedula de beneficiario a eliminar -> ')
     if userID in list:
         position = list.index(userID)
         list.pop(position)
         list.pop(position)
         list.pop(position - 1)
-        file = open('agenda.txt','w')
+        file = open('Archivos/agenda.txt','w')
         for i in list:
             file.write(i + '\n')
         file.close()
