@@ -15,7 +15,8 @@ def viewData():
     return data
 
 def filterData(list):
-    filter = input('Ingrese letra a filtrar -> ').upper()
+    filter = input('Digite la letra por la que empiezan los beneficiaros: ').upper()
+    print('Listado filtrado de beneficiarios: \n')
     for i in list:
         if i[0] == filter:
             position = list.index(i)
@@ -45,37 +46,55 @@ def deleteData(list):
     userID = input('Ingrese Numero de Cedula de beneficiario a eliminar -> ')
     if userID in list:
         position = list.index(userID)
+        list.pop(position)
+        list.pop(position)
         list.pop(position - 1)
-        list.pop(position)
-        list.pop(position)
-        file = open('Archivos/agenda.txt','a')
+        file = open('Archivos/agenda.txt','w')
         for i in list:
             file.write(i + '\n')
         file.close()
-    
-def mainMenu():
-    mainMenu = int(input('''
-    Menu Principal
-    1. Ver listado
-    2. Ver listado filtrado
-    3. Agregar beneficiario
-    4. Buscar beneficiario
-    5. Borrar beneficiario
-    6. Salir
-    '''))
-    return mainMenu
 
 # MAIN PROGRAM 
 
-
 createFile()
-menu = mainMenu()
-print(menu)
-list = viewData()
-print(list)
-# while menu != 6:
-#     if menu == 1:
-#         print('Listado de beneficiarios \n')
-#         print(list)
-#         print(menu)
+
+menu = int(input('''
+Menu Principal
+1. Ver listado
+2. Ver listado filtrado
+3. Agregar beneficiario
+4. Buscar beneficiario
+5. Borrar beneficiario
+6. Salir
+'''))
+
+while menu != 6:
+    if menu == 1:
+        print(viewData())
+        
+    elif menu == 2:
+        filterData(viewData())
+       
+    elif menu == 3:
+        addData()
+    
+    elif menu == 4:
+        searchData(viewData())
+    
+    elif menu == 5:
+        deleteData(viewData())
+    
+    else:
+        print('Opcion invalida')
+    menu = int(input('''
+Menu Principal
+1. Ver listado
+2. Ver listado filtrado
+3. Agregar beneficiario
+4. Buscar beneficiario
+5. Borrar beneficiario
+6. Salir
+'''))
+print('Hasta pronto')
+
     
