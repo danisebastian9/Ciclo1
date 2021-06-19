@@ -24,10 +24,22 @@ def filterData(list):
             print(list[position + 1])
             print(list[position + 2])
 
-def addData():
+def addData(list):
     file = open('Archivos/agenda.txt','a')
     user = input('Ingrese Nombre y Apellido del beneficiario -> ').title()
     userId = input('Ingrese Numero de cedula del beneficiario -> ')
+    if userId in list:
+        print('Usuario ya existe')
+        menu = int(input('''
+Menu Principal
+1. Ver listado
+2. Ver listado filtrado
+3. Agregar beneficiario
+4. Buscar beneficiario
+5. Borrar beneficiario
+6. Salir
+'''))   
+        return menu
     userPhone = input('Ingrese Numero telefonico -> ')
     file.write(user + '\n')
     file.write(userId + '\n')
@@ -76,7 +88,7 @@ while menu != 6:
         filterData(viewData())
        
     elif menu == 3:
-        addData()
+        addData(viewData())
     
     elif menu == 4:
         searchData(viewData())
