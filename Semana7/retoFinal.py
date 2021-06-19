@@ -30,16 +30,7 @@ def addData(list):
     userId = input('Ingrese Numero de cedula del beneficiario -> ')
     if userId in list:
         print('Usuario ya existe')
-        menu = int(input('''
-Menu Principal
-1. Ver listado
-2. Ver listado filtrado
-3. Agregar beneficiario
-4. Buscar beneficiario
-5. Borrar beneficiario
-6. Salir
-'''))   
-        return menu
+        return
     userPhone = input('Ingrese Numero telefonico -> ')
     file.write(user + '\n')
     file.write(userId + '\n')
