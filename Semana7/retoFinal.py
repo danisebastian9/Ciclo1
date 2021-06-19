@@ -26,7 +26,6 @@ def filterData(list):
 
 def addData(list):
     file = open('Archivos/agenda.txt','a')
-    print('Digite la información del beneficiario a agregar:')
     user = input('Ingrese Nombre y Apellido del beneficiario -> ').title()
     userId = input('Ingrese Numero de cedula del beneficiario -> ')
     if userId in list:
@@ -37,7 +36,6 @@ def addData(list):
     file.write(userId + '\n')
     file.write(userPhone + '\n')
     file.close()
-    print('El beneficiario ha sido agregado')
 
 def searchData(list):
     user = input('Ingrese Nombre y Apellido a buscar -> ').title()
@@ -75,7 +73,7 @@ Menu Principal
 
 while menu != 6:
     if menu == 1:
-        print('Listado de beneficiarios:')
+        print('Listado de beneficiarios:\n')
         list = viewData()
         for i in list:
             print(i)
@@ -84,13 +82,16 @@ while menu != 6:
         filterData(viewData())
        
     elif menu == 3:
+        print('Digite la información del beneficiario a agregar:')
         addData(viewData())
+        print('El beneficiario ha sido agregado')
     
     elif menu == 4:
         searchData(viewData())
     
     elif menu == 5:
         deleteData(viewData())
+        print('El usuario ha sido eliminado del listado')
     
     else:
         print('Opcion invalida')
