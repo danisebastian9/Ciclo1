@@ -1,4 +1,3 @@
-# Menu con while
 
 def createFile():
     file = open('agenda.txt','w')
